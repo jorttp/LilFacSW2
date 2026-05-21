@@ -1,4 +1,3 @@
-[DAS.md](https://github.com/user-attachments/files/28080575/DAS.md)
 # Documento de Arquitectura de Software (DAS)
 
 ---
@@ -7,6 +6,7 @@
 **Arquitectos:**
 - Karen Juliana Montoya Velandia
 - Jose Manuel Mosquera Restrepo
+
 ---
 
 ## Control de cambios y revisiones
@@ -83,6 +83,22 @@
 - [7.1	Línea base arquitectónica de componentes ](#71-línea-base-arquitectónica-de-componentes)
   - [7.1.1	Componente 1 ](#711-componente-1)
   - [7.1.2	Componente 1	](#712-componente-2)
+  - [7.1.1	Componente 1 ](#711-componente-1)
+  - [7.1.2	Componente 2	](#712-componente-2)
+  - [7.1.3	Componente 3	](#713-componente-3)
+  - [7.1.4	Componente 4	](#714-componente-4)
+  - [7.1.5	Componente 5	](#715-componente-5)
+  - [7.1.6	Componente 6	](#716-componente-6)
+  - [7.1.7	Componente 7	](#717-componente-7)
+  - [7.1.8	Componente 8	](#718-componente-8)
+  - [7.1.9	Componente 9	](#719-componente-9)
+  - [7.1.10	Componente 10	](#7110-componente-10)
+  - [7.1.11	Componente 11	](#7111-componente-11)
+  - [7.1.12	Componente 12	](#7112-componente-12)
+  - [7.1.13	Componente 13	](#7113-componente-13)
+  - [7.1.14	Componente 14	](#7114-componente-14)
+  - [7.1.15	Componente 15	](#7115-componente-15)
+  - [7.1.16	Componente 16	](#7116-componente-16)
 
 
 - [7.2	Estilos y patrones arquitectónicos adoptados	](#72-estilos-y-patrones-arquitectónicos-adoptados)
@@ -98,10 +114,15 @@
     - [7.2.2.3	Solución/Motivación	](#7223-soluciónmotivación)
 
 
-  - [7.2.N Estilo arquitectónico n	](#72n-estilo-arquitectónico-n)
-    - [7.2.N.1 Nombre	](#72n1-nombre)
-    - [7.2.N.2 Problema	](#72n2-problema)
-    - [7.2.N.3 Solución/Motivación	](#72n3-soluciónmotivación)
+  - [7.2.3 Patrón arquitectónico 1	](#723patrón-arquitectónico-1)
+    - [7.2.3.1 Nombre	](#7231nombre)
+    - [7.2.3.2 Problema	](#7232-problema)
+    - [7.2.3.3 Solución/Motivación	](#7233soluciónmotivación)
+
+  - [7.2.4 Patrón arquitectónico 2	](#724patrón-arquitectónico-2)
+      - [7.2.4.1 Nombre	](#7241-nombre)
+      - [7.2.4.2 Problema	](#7242-problema)
+      - [7.2.4.3 Solución/Motivación	](#7243-soluciónmotivación)
 
 [8. Justificación alternativa de solución](#8-justificación-alternativa-de-solución) 
 
@@ -112,288 +133,55 @@
 [9. Vistas de arquitectura del sistema](#9-vistas-de-arquitectura-del-sistema)
 
 - [9.1	Vista Funcional/Vista de Escenarios/Vista de Casos de Uso](#91-vista-funcionalvista-de-escenariosvista-de-casos-de-uso)	
-    - [9.1.1	Modelo de procesos del negocio	](#911-modelo-de-procesos-del-negocio)
-    - [9.1.2	Modelado de dominio	](#912-modelado-de-dominio)
-    - [9.1.3	Modelo de contextos	](#913-modelo-de-contextos)
-      - [9.1.3.1	Diagrama	](#9131-diagrama)
-      - [9.1.3.2	Documentación contextos	](#9132-documentación-contextos)
-
-    - [9.1.4	Modelo de mapeo de contextos	](#914-modelo-de-mapeo-de-contextos)
-        - [9.1.4.1	Diagrama	](#9141-diagrama)
-        - [9.1.4.2	Documentación mapeo de contextos](#9142-documentación-mapeo-de-contextos)
-
-    - [9.1.5	Modelos de dominio	](#915-modelos-de-dominio)
-        - [9.1.5.1	Contexto 1	](#9151-contexto-1)
-        - [9.1.5.2	Modelo anémico](#9152-modelo-anémico)	
-        - [9.1.5.3	Modelo enriquecido	](#9153-modelo-enriquecido)
-        - [9.1.5.4	Contexto 2	](#9154-contexto-2)
-        - [9.1.5.5	Modelo anémico	](#9155-modelo-anémico)
-        - [9.1.5.6	Modelo enriquecido	](#9156-modelo-enriquecido)
-        - [9.1.5.7	Contexto 3	](#9157-contexto-3)
-        - [9.1.5.8	Modelo anémico	](#9158-modelo-anémico)
-        - [9.1.5.9	Modelo enriquecido	](#9159-modelo-enriquecido)
-        - [9.1.5.10	Contexto N	](#91510-contexto-n)
-        - [9.1.5.11	Modelo anémico	](#91511-modelo-anémico)
-        - [9.1.5.12	Modelo enriquecido	](#91512-modelo-enriquecido)
-    
-    - [9.1.6	Flujo de eventos/Event Storming	](#916-flujo-de-eventosevent-storming)
-        - [9.1.6.1	Diagrama	](#9161-diagrama)
-        - [9.1.6.2	Especificación	](#9162-especificación)
-    - [9.1.7	Glosario de términos del negocio	](#917-glosario-de-términos-del-negocio)
-    - [9.1.8	Especificación de requisitos de software	](#918-especificación-de-requisitos-de-software)
-        - [9.1.8.1	Requisitos de usuario	](#9181-requisitos-de-usuario)
-        - [9.1.8.2	Requisitos del sistema	](#9182-requisitos-del-sistema)
-          - [9.1.8.2.1	Requisitos funcionales	](#91821-requisitos-funcionales)
-          - [9.1.8.2.2	Requisitos no funcionales	](#91822-requisitos-no-funcionales)
-          - [9.1.8.2.3	Requisitos de información	](#91823-requisitos-de-información)
-          - [9.1.8.2.4	Reglas de negocio	](#91824-reglas-de-negocio)
-    - [9.1.9	Casos de uso	](#919-casos-de-uso)
-        - [9.1.9.1	Modelo de contexto	](#9191-modelo-de-contexto)
-          - [9.1.9.1.1	Diagrama	](#91911-diagrama)
-          - [9.1.9.1.2	Descripción	](#91912-descripción)
-        - [9.1.9.2	Diagramas de casos de uso	](#9192-diagramas-de-casos-de-uso)
-          - [9.1.9.2.1	Componente 1/Módulo 1/Grupo 1	](#91921-componente-1módulo-1grupo-1)
-            - [9.1.9.2.1.1	Diagrama de casos de uso	]()
-            - [9.1.9.2.1.2	Especificación de casos de uso	]()
-              - [9.1.9.2.1.2.1	Caso de uso 1	]()
-                - [9.1.9.2.1.2.1.1	Datos básicos caso de uso	]()
-                - [9.1.9.2.1.2.1.2	Escenarios del caso de uso	]()
-                - [9.1.9.2.1.2.1.3	Flujo normal/flujo básico	]()
-                - [9.1.9.2.1.2.1.4	Flujo alterno 1	]()
-                - [9.1.9.2.1.2.1.5	Flujo alterno 2	]()
-                - [9.1.9.2.1.2.1.6	Flujo alterno N	]()
-                - [9.1.9.2.1.2.1.7	Flujo Excepcional 1	]()
-                - [9.1.9.2.1.2.1.8	Flujo Excepcional 2	]()
-                - [9.1.9.2.1.2.1.9	Flujo Excepcional N	]()
-                - [9.1.9.2.1.2.1.10	Diagrama de actividades	]()
-                  - [9.1.9.2.1.2.1.10.1	Diagrama	]()
-                  - [9.1.9.2.1.2.1.10.2	Documentación	]()
-                - [9.1.9.2.1.2.1.11	Diagrama de estados	]()
-                  - [9.1.9.2.1.2.1.11.1	Diagrama	]()
-                  - [9.1.9.2.1.2.1.11.2	Documentación	]()
-              - [9.1.9.2.1.2.2	Caso de uso 2	]()
-                - [9.1.9.2.1.2.2.1	Datos básicos caso de uso	]()
-                - [9.1.9.2.1.2.2.2	Escenarios del caso de uso	]()
-                - [9.1.9.2.1.2.2.3	Flujo normal/flujo básico	]()
-                - [9.1.9.2.1.2.2.4	Flujo alterno 1	]()
-                - [9.1.9.2.1.2.2.5	Flujo alterno 2	]()
-                - [9.1.9.2.1.2.2.6	Flujo alterno N	]()
-                - [9.1.9.2.1.2.2.7	Flujo Excepcional 1	]()
-                - [9.1.9.2.1.2.2.8	Flujo Excepcional 2	]()
-                - [9.1.9.2.1.2.2.9	Flujo Excepcional N	]()
-                - [9.1.9.2.1.2.2.10	Diagrama de actividades	]()
-                  - [9.1.9.2.1.2.2.10.1	Diagrama	]()
-                  - [9.1.9.2.1.2.2.10.2	Documentación	]()
-                - [9.1.9.2.1.2.2.11	Diagrama de estados	]()
-                  - [9.1.9.2.1.2.2.11.1	Diagrama	]()
-                  - [9.1.9.2.1.2.2.11.2	Documentación	]()
-              - [9.1.9.2.1.2.3	Caso de uso N	]()
-                - [9.1.9.2.1.2.3.1	Datos básicos caso de uso	]()
-                - [9.1.9.2.1.2.3.2	Escenarios del caso de uso	]()
-                - [9.1.9.2.1.2.3.3	Flujo normal/flujo básico	]()
-                - [9.1.9.2.1.2.3.4	Flujo alterno 1	]()
-                - [9.1.9.2.1.2.3.5	Flujo alterno 2	]()
-                - [9.1.9.2.1.2.3.6	Flujo alterno N	]()
-                - [9.1.9.2.1.2.3.7	Flujo Excepcional 1	]()
-                - [9.1.9.2.1.2.3.8	Flujo Excepcional 2	]()
-                - [9.1.9.2.1.2.3.9	Flujo Excepcional N	]()
-                - [9.1.9.2.1.2.3.10	Diagrama de actividades	]()
-                  - [9.1.9.2.1.2.3.10.1	Diagrama	]()
-                  - [9.1.9.2.1.2.3.10.2	Documentación	]()
-                - [9.1.9.2.1.2.3.11	Diagrama de estados	]()
-                  - [9.1.9.2.1.2.3.11.1	Diagrama	]()
-                  - [9.1.9.2.1.2.3.11.2	Documentación	]()
-          - [9.1.9.2.2	Componente 2/Módulo 2/Grupo 2	]()
-            - [9.1.9.2.2.1	Diagrama de casos de uso	]()
-            - [9.1.9.2.2.2	Especificación de casos de uso	]()
-              - [9.1.9.2.2.2.1	Caso de uso 1	]()
-                - [9.1.9.2.2.2.1.1	Datos básicos caso de uso	]()
-                - [9.1.9.2.2.2.1.2	Escenarios del caso de uso	]()
-                - [9.1.9.2.2.2.1.3	Flujo normal/flujo básico	]()
-                - [9.1.9.2.2.2.1.4	Flujo alterno 1	]()
-                - [9.1.9.2.2.2.1.5	Flujo alterno 2	]()
-                - [9.1.9.2.2.2.1.6	Flujo alterno N	]()
-                - [9.1.9.2.2.2.1.7	Flujo Excepcional 1	]()
-                - [9.1.9.2.2.2.1.8	Flujo Excepcional 2	]()
-                - [9.1.9.2.2.2.1.9	Flujo Excepcional N	]()
-                - [9.1.9.2.2.2.1.10	Diagrama de actividades	]()
-                  - [9.1.9.2.2.2.1.10.1	Diagrama	]()
-                  - [9.1.9.2.2.2.1.10.2	Documentación	]()
-                - [9.1.9.2.2.2.1.11	Diagrama de estados	]()
-                  - [9.1.9.2.2.2.1.11.1	Diagrama	]()
-                  - [9.1.9.2.2.2.1.11.2	Documentación	]()
-              - [9.1.9.2.2.2.2	Caso de uso 2	]()
-                - [9.1.9.2.2.2.2.1	Datos básicos caso de uso	]()
-                - [9.1.9.2.2.2.2.2	Escenarios del caso de uso	]()
-                - [9.1.9.2.2.2.2.3	Flujo normal/flujo básico	]()
-                - [9.1.9.2.2.2.2.4	Flujo alterno 1	]()
-                - [9.1.9.2.2.2.2.5	Flujo alterno 2	]()
-                - [9.1.9.2.2.2.2.6	Flujo alterno N	]()
-                - [9.1.9.2.2.2.2.7	Flujo Excepcional 1	]()
-                - [9.1.9.2.2.2.2.8	Flujo Excepcional 2	]()
-                - [9.1.9.2.2.2.2.9	Flujo Excepcional N	]()
-                - [9.1.9.2.2.2.2.10	Diagrama de actividades	]()
-                  - [9.1.9.2.2.2.2.10.1	Diagrama	]()
-                  - [9.1.9.2.2.2.2.10.2	Documentación	]()
-                - [9.1.9.2.2.2.2.11	Diagrama de estados	]()
-                  - [9.1.9.2.2.2.2.11.1	Diagrama	]()
-                  - [9.1.9.2.2.2.2.11.2	Documentación	]()
-              - [9.1.9.2.2.2.3	Caso de uso N	]()
-                - [9.1.9.2.2.2.3.1	Datos básicos caso de uso	]()
-                - [9.1.9.2.2.2.3.2	Escenarios del caso de uso	]()
-                - [9.1.9.2.2.2.3.3	Flujo normal/flujo básico	]()
-                - [9.1.9.2.2.2.3.4	Flujo alterno 1	]()
-                - [9.1.9.2.2.2.3.5	Flujo alterno 2	]()
-                - [9.1.9.2.2.2.3.6	Flujo alterno N	]()
-                - [9.1.9.2.2.2.3.7	Flujo Excepcional 1	]()
-                - [9.1.9.2.2.2.3.8	Flujo Excepcional 2	]()
-                - [9.1.9.2.2.2.3.9	Flujo Excepcional N	]()
-                - [9.1.9.2.2.2.3.10	Diagrama de actividades	]()
-                  - [9.1.9.2.2.2.3.10.1	Diagrama	]()
-                  - [9.1.9.2.2.2.3.10.2	Documentación	]()
-                - [9.1.9.2.2.2.3.11	Diagrama de estados	]()
-                  - [9.1.9.2.2.2.3.11.1	Diagrama	]()
-                  - [9.1.9.2.2.2.3.11.2	Documentación	]()
-                - [9.1.9.2.3	Componente N/Módulo N/Grupo N	]()
-                  - [9.1.9.2.3.1	Diagrama de casos de uso	]()
-                  - [9.1.9.2.3.2	Especificación de casos de uso	]()
-                    - [9.1.9.2.3.2.1	Caso de uso 1	]()
-                      - [9.1.9.2.3.2.1.1	Datos básicos caso de uso	]()
-                      - [9.1.9.2.3.2.1.2	Escenarios del caso de uso	]()
-                      - [9.1.9.2.3.2.1.3	Flujo normal/flujo básico	]()
-                      - [9.1.9.2.3.2.1.4	Flujo alterno 1	]()
-                      - [9.1.9.2.3.2.1.5	Flujo alterno 2	]()
-                      - [9.1.9.2.3.2.1.6	Flujo alterno N	]()
-                      - [9.1.9.2.3.2.1.7	Flujo Excepcional 1	]()
-                      - [9.1.9.2.3.2.1.8	Flujo Excepcional 2	]()
-                      - [9.1.9.2.3.2.1.9	Flujo Excepcional N	]()
-                      - [9.1.9.2.3.2.1.10	Diagrama de actividades	]()
-                        - [9.1.9.2.3.2.1.10.1	Diagrama	]()
-                        - [9.1.9.2.3.2.1.10.2	Documentación	]()
-                      - [9.1.9.2.3.2.1.11	Diagrama de estados	]()
-                        - [9.1.9.2.3.2.1.11.1	Diagrama	]()
-                        - [9.1.9.2.3.2.1.11.2	Documentación	]()
-                    - [9.1.9.2.3.2.2	Caso de uso 2	]()
-                      - [9.1.9.2.3.2.2.1	Datos básicos caso de uso	]()
-                      - [9.1.9.2.3.2.2.2	Escenarios del caso de uso	]()
-                      - [9.1.9.2.3.2.2.3	Flujo normal/flujo básico	]()
-                      - [9.1.9.2.3.2.2.4	Flujo alterno 1	]()
-                      - [9.1.9.2.3.2.2.5	Flujo alterno 2	]()
-                      - [9.1.9.2.3.2.2.6	Flujo alterno N	]()
-                      - [9.1.9.2.3.2.2.7	Flujo Excepcional 1	]()
-                      - [9.1.9.2.3.2.2.8	Flujo Excepcional 2	]()
-                      - [9.1.9.2.3.2.2.9	Flujo Excepcional N	]()
-                      - [9.1.9.2.3.2.2.10	Diagrama de actividades	]()
-                        - [9.1.9.2.3.2.2.10.1	Diagrama	]()
-                        - [9.1.9.2.3.2.2.10.2	Documentación	]()
-                      - [9.1.9.2.3.2.2.11	Diagrama de estados	]()
-                        - [9.1.9.2.3.2.2.11.1	Diagrama	]()
-                        - [9.1.9.2.3.2.2.11.2	Documentación	]()
-                    - [9.1.9.2.3.2.3	Caso de uso N	]()
-                      - [9.1.9.2.3.2.3.1	Datos básicos caso de uso	]()
-                      - [9.1.9.2.3.2.3.2	Escenarios del caso de uso	]()
-                      - [9.1.9.2.3.2.3.3	Flujo normal/flujo básico	]()
-                      - [9.1.9.2.3.2.3.4	Flujo alterno 1	]()
-                      - [9.1.9.2.3.2.3.5	Flujo alterno 2	]()
-                      - [9.1.9.2.3.2.3.6	Flujo alterno N	]()
-                      - [9.1.9.2.3.2.3.7	Flujo Excepcional 1	]()
-                      - [9.1.9.2.3.2.3.8	Flujo Excepcional 2	]()
-                      - [9.1.9.2.3.2.3.9	Flujo Excepcional N	]()
-                      - [9.1.9.2.3.2.3.10	Diagrama de actividades	]()
-                        - [9.1.9.2.3.2.3.10.1	Diagrama	]()
-                        - [9.1.9.2.3.2.3.10.2	Documentación	]()
-                      - [9.1.9.2.3.2.3.11	Diagrama de estados	]()
-                        - [9.1.9.2.3.2.3.11.1	Diagrama	]()
-                          - [9.1.9.2.3.2.3.11.2	Documentación	]()
-    - [9.1.10	Incepción Ágil	]()
-    - [9.1.11	Por qué estamos aquí	]()
-    - [9.1.12	Visión/Elevator Pitch	]()
-      - [9.1.12.1	Visión	]()
-      - [9.1.12.2	Project Canvas	]()
-      - [9.1.12.3	Mapa de impacto	]()
-    - [9.1.13	Caja de producto	]()
-    - [9.1.14	Lo que sí, lo que no	]()
-      - [9.1.14.1	Mapa de historias de usuario	]()
-      - [9.1.14.2	Product Backlog Item	]()
-    - [9.1.15	La comunidad	]()
-    - [9.1.16	La solución	]()
-    - [9.1.17	Los riesgos/Los miedos	]()
-    - [9.1.18	Tamaño/Talla de historias de usuario	]()
-        -   [9.1.18.1	Tallaje del producto	]()
-            - [9.1.18.1.1	Definiciones para el tallaje	]()
-            - [9.1.18.1.2	Tallaje del producto	]()
-        - [9.1.18.2	Release Plan	]()
-            -   [9.1.18.2.1	Definiciones para el release plan	]()
-            - [9.1.18.2.2	Release plan	]()
-    - [9.1.19	Trade off de atributos de calidad	]()
-    - [9.1.20	Cuánto cuesta	]()
-      - [9.1.20.1. Definiciones para el coste	]()
-      - [9.1.20.1.2	Coste	]()
-- [9.2	Vista Lógica	]()
-    - [9.2.1	Diagrama de clases	]()
-      - [9.2.1.1	Componente 1	]()
-        - [9.2.1.1.1	Diagrama	]()
-        - [9.2.1.1.2	Documentación	]()
-      - [9.2.1.2	Componente 2	]()
-        -  [9.2.1.2.1	Diagrama	]()
-        -  [9.2.1.2.2	Documentación	]()
-      - [9.2.1.3	Componente N	]()
-        -  [9.2.1.3.1	Diagrama	]()
-        -  [9.2.1.3.2	Documentación	]()
-    -   [9.2.2	Diagrama de objetos	]()
-         - [9.2.2.1	Componente 1	]()
-            -   [9.2.2.1.1	Diagrama	]()
-            -   [9.2.2.1.2	Documentación	]()
-         - [9.2.2.2	Componente 2	]()
-            -  [9.2.2.2.1	Diagrama	]()
-            - [9.2.2.2.2	Documentación	]()
-        - [9.2.2.3	Componente N	]()
-- [9.3	Vista de Despliegue/Vista de Desarrollo/Vista de Implementación	]()
-    - [9.3.1	Diagrama de componentes	]()
-      - [9.3.1.1	Componente 1	]()
+ 
+- [9.2	Vista Lógica	](#92-vista-lógica)
+    - [9.2.1	Diagrama de clases	](#921-diagrama-de-clases)
+      
+- [9.3	Vista de Despliegue/Vista de Desarrollo/Vista de Implementación	](#93-vista-de-desplieguevista-de-desarrollovista-de-implementación)
+    - [9.3.1	Diagrama de componentes	](#931-diagrama-de-componentes)
+      - [9.3.1.1	Componente 1	](#9311-componente-1)
         - [9.3.1.1.1	Diagrama	]()
         - [9.3.1.1.2	Documentación	]()
-      - [9.3.1.2	Componente 2	]()
+      - [9.3.1.2	Componente 2	](#9312-componente-2)
         - [9.3.1.2.1	Diagrama	]()
         - [9.3.1.2.2	Documentación	]()
-      - [9.3.1.3	Componente N	]()
+      - [9.3.1.3	Componente 3	](#9313-componente-3)
         - [9.3.1.3.1	Diagrama	]()
         - [9.3.1.3.2	Documentación	]()
-    - [9.3.2	Diagrama de paquetes	]()
-      - [9.3.2.1	Componente 1	]()
+      - [9.3.1.4	Componente 4	](#9314-componente-4)
+          - [9.3.1.4.1	Diagrama	]()
+          - [9.3.1.4.2	Documentación	]()
+      - [9.3.1.5	Componente 5	](#9315-componente-5)
+        - [9.3.1.5.1	Diagrama	]()
+        - [9.3.1.5.2	Documentación	]()
+      - [9.3.1.6	Componente 6	](#9316-componente-6)
+          - [9.3.1.6.1	Diagrama	]()
+          - [9.3.1.6.2	Documentación	]()
+      - [9.3.1.7	Componente 7	](#9317-componente-7)
+          - [9.3.1.7.1	Diagrama	]()
+          - [9.3.1.7.2	Documentación	]()
+    - [9.3.2	Diagrama de paquetes	](#932-diagrama-de-paquetes)
+      - [9.3.2.1	Componente 1	](#9321-componente-1)
         -  [9.3.2.1.1	Diagrama	]()
         - [9.3.2.1.2	Documentación	]()
-      - [9.3.2.2	Componente 2	]()
+      - [9.3.2.2	Componente 2	](#9322-componente-2)
         - [9.3.2.2.1	Diagrama	]()
         - [9.3.2.2.2	Documentación	]()
-      - [9.3.2.3	Componente N	]()
-        - [9.3.2.3.1	Diagrama	]()
-        - [9.3.2.3.2	Documentación	]()
-- [9.4	Vista de Procesos	]()
-    - [9.4.1	Diagrama de secuencia	]()
-      - [9.4.1.1	Componente 1	]()
+      
+- [9.4	Vista de Procesos	](#94-vista-de-procesos)
+    - [9.4.1	Diagrama de secuencia	](#941-diagrama-de-secuencia)
+      - [9.4.1.1	Componente 1	](#9411-componente-1-without-return)
         - [9.4.1.1.1	Diagrama	]()
         - [9.4.1.1.2	Documentación	]()
-      - [9.4.1.2	Componente 2	]()
+      - [9.4.1.2	Componente 2	](#9412-componente-2-with-return)
         - [9.4.1.2.1	Diagrama	]()
         - [9.4.1.2.2	Documentación	]()
-      - [9.4.1.3	Componente N	]()
-        - [9.4.1.3.1	Diagrama	]()
-        - [9.4.1.3.2	Documentación	]()
-    - [9.4.2	Diagrama de colaboración]()	
-      - [9.4.2.1	Componente 1	]()
-        - [9.4.2.1.1	Diagrama	]()
-        - [9.4.2.1.2	Documentación	]()
-      - [9.4.2.2	Componente 2	]()
-        - [9.4.2.2.1	Diagrama	]()
-        - [9.4.2.2.2	Documentación	]()
-      - [9.4.2.3	Componente N	]()
-        - [9.4.2.3.1	Diagrama	]()
-        - [9.4.2.3.2	Documentación	]()
-- [9.5	Vista Física/Vista de Implantación	]()
-    - [9.5.1	Diagrama de despliegue	]()
-      - [9.5.1.1	Diagrama	]()
-      - [9.5.1.2	Documentación]()	
+      
+ 
+- [9.5	Vista Física/Vista de Implantación	](#95-vista-físicavista-de-implantación)
+    - [9.5.1	Diagrama de despliegue	](#951-diagrama-de-despliegue)
+      - [9.5.1.1	Diagrama	](#9511-diagrama)
+      - [9.5.1.2	Documentación](#9512-documentación)	
 
 
 ---
@@ -1171,8 +959,7 @@ el alcance y los requisitos del proyecto.
 ###### **_Diagrama modelo de contexto_**
 
 ---
-<img width="397" height="264" alt="img_1" src="https://github.com/user-attachments/assets/5bff3b4b-692f-4502-8fdb-a1d2457a74a0" />
-
+<img width="12364" height="4484" alt="modeloContexto" src="https://github.com/user-attachments/assets/0d769eda-6e38-4af1-b6b6-103c3cdaa582" />
 
 ---
 
@@ -1411,7 +1198,7 @@ en prácticas comprobadas y patrones que han demostrado ser efectivos en context
 ###### **_Diagrama Arquetipo de solución/referencia_**
 
 ---
-<img width="1792" height="862" alt="arquetipoReferencia" src="https://github.com/user-attachments/assets/a9328122-d1d8-4107-abdf-3fc16345d787" />
+<img width="1792" height="862" alt="arquetipoReferencia" src="https://github.com/user-attachments/assets/29841f82-84bd-4444-bdeb-5c034d7b8758" />
 
 ---
 
@@ -1687,7 +1474,7 @@ como los de negocio.
 ###### **_Diagrama Arquitectura de solución/referencia_**
 
 ---
-![img.png](arquitecturaSolución.png)
+<img width="1576" height="696" alt="arquitecturaSolución" src="https://github.com/user-attachments/assets/066eea72-a2f6-454d-85d9-36cb585ebab3" />
 ---
 
 ### **Documentación Arquetipo de solución/referencia**
@@ -1958,6 +1745,7 @@ documentada.
 Es un conjunto de documentos y especificaciones que describen como debe ser la estructura y el diseño de un sistema 
 o software. Esta línea base sirve como referencia para asegurarse de que todos los cambios y desarrollos futuros se 
 realicen de manera coherente y alineada con los objetivos iniciales del proyecto.
+
 ### 7.1 Línea base arquitectónica de componentes
 
 A continuación, se presentan cada uno de los componentes empleados en la construcción de LILFAC, detallando la motivación
@@ -2599,17 +2387,21 @@ cómo interactúan las diferentes partes y cómo se pueden desarrollar, probar, 
 
 ##### 9.3.1.1 Componente 1
 
-**Descripción del componente:** Microservicio encargado de gestionar la información de los empleados del sistema LILFAC, incluyendo su creación, actualización, eliminación y consulta, así como la asignación de roles (administrador, cajero, bodega, logística) para el control de acceso por perfil en coordinación con Keycloak.
+**Descripción del componente:** Microservicio encargado de gestionar la información de los empleados del sistema LILFAC, 
+incluyendo su creación, actualización, eliminación y consulta, así como la asignación de roles (administrador, cajero, bodega, 
+logística) para el control de acceso por perfil en coordinación con Keycloak.
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-empleado-ms y su relación de dependencias.
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio
+lilfac-empleado-ms y su relación de dependencias.
 
-- **Diagrama:** 
+##### 9.3.1.1.1 Diagrama
+
 ---
 
-![img.png](img.png)
+<img width="397" height="264" alt="img" src="https://github.com/user-attachments/assets/195f2caa-0c6b-4576-8ecc-c93127ba26b0" />
 
 ---
-- **Documentación:**
+##### 9.3.1.1.2	Documentación
 
   **Componente:** lilfac-employee-ms
   **Tipo:** Desarrollado
@@ -2621,37 +2413,83 @@ cómo interactúan las diferentes partes y cómo se pueden desarrollar, probar, 
   
 ##### 9.3.1.2 Componente 2
 
-**Descripción del componente:** Microservicio encargado de gestionar la información de los clientes de la empresa, incluyendo su registro, actualización, eliminación y consulta, con soporte para filtrado por nombre y cédula.
+**Descripción del componente:** Microservicio encargado de gestionar la información de los clientes de la empresa, 
+incluyendo su registro, actualización, eliminación y consulta, con soporte para filtrado por nombre y cédula.
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-cliente-ms y su relación de dependencias.
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio 
+lilfac-customer-ms y su relación de dependencias.
 
 
-- **Diagrama:** 
+##### 9.3.1.2.1	Diagrama
+
 ---
-![img_1.png](img_1.png)
+
+<img width="397" height="264" alt="img_1" src="https://github.com/user-attachments/assets/1e93449e-f0a1-4e2f-a3aa-2f0c4217d137" />
+
 ---
 
-- **Documentación:**
+##### 9.3.1.2.2 Documentación:
 - **Componente:** lilfac-customer-ms
-  **Tipo:** Desarrollado
-  **Depende de:**
+  
+- **Tipo:** Desarrollado
+- **Depende de:**
     - Spring Boot 3.3.5
     - Java 21
     - postgresql
     - Spring Cloud 4.1.3
 
+- **Componente:** java21
+- **Tipo:** Adoptado
+- **Depende de:**
+- **Es usado por:**
+  - springboot 3.3.5
+  - lilfac-customer-ms
+  - springcloud 4.1.3
+  - postgresql
+  Descripción componente: Stack base de desarrollo
+
+- **Componente:** springboot 3.3.5
+- **Tipo:** Adoptado
+- **Depende de:**
+  - java21
+- **Es usado por:**
+  - lilfac-customer-ms
+  Descripción componente: Framework acelerador de desarrollo, para lograr capacidades empresariales, a partir de características para producir aplicaciones autocontenidas
+
+- **Componente:** postgresql
+- **Tipo:** Adoptado
+- **Depende de:**
+  - java21
+- **Es usado por:**
+  - lilfac-customer-ms
+  Descripción componente: Componente de conexión a bases de datos SQL
+
+- **Componente:** springcloud 4.1.3
+- **Tipo:** Adoptado
+- **Depende de:**
+  - springboot 3.3.5
+  - java21
+- **Es usado por:**
+  - lilfac-customer-ms
+  Descripción componente: Spring Cloud es un conjunto de herramientas que simplifica el desarrollo de microservicios y aplicaciones distribuidas en la nube, integrándose con Spring Boot.
 
 ##### 9.3.1.3 Componente 3
 
-**Descripción del componente:** Microservicio encargado de gestionar el catálogo de productos disponibles para alquiler, incluyendo su registro, actualización, eliminación, consulta y filtrado por código y categoría, así como el historial de costos de cada producto.
+**Descripción del componente:** Microservicio encargado de gestionar el catálogo de productos disponibles para alquiler,
+incluyendo su registro, actualización, eliminación, consulta y filtrado por código y categoría, así como el historial de 
+costos de cada producto.
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-inventory-ms y su relación de dependencias.
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio
+lilfac-inventory-ms y su relación de dependencias.
 
 -**Diagrama:** 
 
 ---
-![img_2.png](img_2.png)
+
+<img width="397" height="264" alt="img_2" src="https://github.com/user-attachments/assets/b2930e1f-f66a-4860-9ee2-d1176efb7768" />
+
 --- 
+
 - **Documentación:**
 - **Componente:** lilfac-inventory-ms
   **Tipo:** Desarrollado
@@ -2661,14 +2499,54 @@ cómo interactúan las diferentes partes y cómo se pueden desarrollar, probar, 
     - postgresql
     - Spring Cloud 4.1.3
 
-##### 9.3.1.4 Componente 4
-**Descripción del componente:** Microservicio encargado de gestionar el ciclo completo de los pedidos de alquiler, desde su creación hasta la entrega y recibimiento de productos, incluyendo la trazabilidad de modificaciones para auditoría.
+- **Componente:** java21
+- **Tipo:** Adoptado
+- **Depende de:**
+- **Es usado por:**
+    - springboot 3.3.5
+    - lilfac-inventory-ms
+    - springcloud 4.1.3
+    - postgresql
+      Descripción componente: Stack base de desarrollo
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-order-ms y su relación de dependencias.
+- **Componente:** springboot 3.3.5
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-inventory-ms
+      Descripción componente: Framework acelerador de desarrollo, para lograr capacidades empresariales, a partir de características para producir aplicaciones autocontenidas
+
+- **Componente:** postgresql
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-inventory-ms
+      Descripción componente: Componente de conexión a bases de datos SQL
+
+- **Componente:** springcloud 4.1.3
+- **Tipo:** Adoptado
+- **Depende de:**
+    - springboot 3.3.5
+    - java21
+- **Es usado por:**
+    - lilfac-inventory-ms
+      Descripción componente: Spring Cloud es un conjunto de herramientas que simplifica el desarrollo de microservicios y aplicaciones distribuidas en la nube, integrándose con Spring Boot.
+
+
+##### 9.3.1.4 Componente 4
+**Descripción del componente:** Microservicio encargado de gestionar el ciclo completo de los pedidos de alquiler, desde 
+su creación hasta la entrega y recibimiento de productos, incluyendo la trazabilidad de modificaciones para auditoría.
+
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio 
+lilfac-order-ms y su relación de dependencias.
 
 **Diagrama**
 ---
-![img_3.png](img_3.png)
+
+<img width="397" height="264" alt="img_3" src="https://github.com/user-attachments/assets/8e4063f4-0125-47b5-a7a2-731b8bd8bf21" />
+
 ---
 - **Documentación:**
 - **Componente:** lilfac-order-ms
@@ -2678,15 +2556,56 @@ cómo interactúan las diferentes partes y cómo se pueden desarrollar, probar, 
     - Java 21
     - postgresql
     - Spring Cloud 4.1.3
+
+- **Componente:** java21
+- **Tipo:** Adoptado
+- **Depende de:**
+- **Es usado por:**
+    - springboot 3.3.5
+    - lilfac-order-ms
+    - springcloud 4.1.3
+    - postgresql
+      Descripción componente: Stack base de desarrollo
+
+- **Componente:** springboot 3.3.5
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-order-ms
+      Descripción componente: Framework acelerador de desarrollo, para lograr capacidades empresariales, a partir de características para producir aplicaciones autocontenidas
+
+- **Componente:** postgresql
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-order-ms
+      Descripción componente: Componente de conexión a bases de datos SQL
+
+- **Componente:** springcloud 4.1.3
+- **Tipo:** Adoptado
+- **Depende de:**
+    - springboot 3.3.5
+    - java21
+- **Es usado por:**
+    - lilfac-order-ms
+      Descripción componente: Spring Cloud es un conjunto de herramientas que simplifica el desarrollo de microservicios y aplicaciones distribuidas en la nube, integrándose con Spring Boot.
+
   
 ##### 9.3.1.5 Componente 5
-**Descripción del componente:** Microservicio encargado de gestionar la facturación del negocio, incluyendo la creación, actualización y eliminación de facturas con soporte para costos adicionales por multas, entrega tardía o daños de productos, así como la información de la empresa configurable para inclusión en documentos.
+**Descripción del componente:** Microservicio encargado de gestionar la facturación del negocio, incluyendo la creación, 
+actualización y eliminación de facturas con soporte para costos adicionales por multas, entrega tardía o daños de productos, 
+así como la información de la empresa configurable para inclusión en documentos.
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-billing-ms y su relación de dependencias.
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio
+lilfac-billing-ms y su relación de dependencias.
 
 **Diagrama**
 ---
-![img_4.png](img_4.png)
+
+<img width="397" height="264" alt="img_4" src="https://github.com/user-attachments/assets/e135db62-c2b2-4616-9a06-4214676b9e29" />
+
 ---
 
 - **Documentación:**
@@ -2698,16 +2617,57 @@ cómo interactúan las diferentes partes y cómo se pueden desarrollar, probar, 
     - postgresql
     - Spring Cloud 4.1.3
 
+- **Componente:** java21
+- **Tipo:** Adoptado
+- **Depende de:**
+- **Es usado por:**
+    - springboot 3.3.5
+    - lilfac-billing-ms
+    - springcloud 4.1.3
+    - postgresql
+      Descripción componente: Stack base de desarrollo
+
+- **Componente:** springboot 3.3.5
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-billing-ms
+      Descripción componente: Framework acelerador de desarrollo, para lograr capacidades empresariales, a partir de características para producir aplicaciones autocontenidas
+
+- **Componente:** postgresql
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-billing-ms
+      Descripción componente: Componente de conexión a bases de datos SQL
+
+- **Componente:** springcloud 4.1.3
+- **Tipo:** Adoptado
+- **Depende de:**
+    - springboot 3.3.5
+    - java21
+- **Es usado por:**
+    - lilfac-billing-ms
+      Descripción componente: Spring Cloud es un conjunto de herramientas que simplifica el desarrollo de microservicios y aplicaciones distribuidas en la nube, integrándose con Spring Boot.
+
+
 ##### 9.3.1.6 Componente 6
 
-**Descripción del componente:** Microservicio encargado de consolidar y analizar los datos del negocio mediante inteligencia artificial, generando recomendaciones de precios por temporada, identificando productos con baja disponibilidad y alta demanda, y facilitando la toma de decisiones estratégicas del administrador.
+**Descripción del componente:** Microservicio encargado de consolidar y analizar los datos del negocio mediante inteligencia 
+artificial, generando recomendaciones de precios por temporada, identificando productos con baja disponibilidad y alta demanda, 
+y facilitando la toma de decisiones estratégicas del administrador.
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-analytics-ms y su relación de dependencias.
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio 
+lilfac-analytics-ms y su relación de dependencias.
 
 **Diagrama**
 ---
-![img_5.png](img_5.png)
+<img width="479" height="326" alt="img_5" src="https://github.com/user-attachments/assets/d0dff57a-8a29-4414-855a-2554359196e2" />
+
 ---
+
 - **Documentación:**
 - **Componente:** lilfac-analytics-ms
   **Tipo:** Desarrollado
@@ -2717,22 +2677,84 @@ cómo interactúan las diferentes partes y cómo se pueden desarrollar, probar, 
     - postgresql
     - Spring Cloud 4.1.3
 
+- **Componente:** java21
+- **Tipo:** Adoptado
+- **Depende de:**
+- **Es usado por:**
+    - springboot 3.3.5
+    - lilfac-analytics-ms
+    - springcloud 4.1.3
+    - postgresql
+      Descripción componente: Stack base de desarrollo
+
+- **Componente:** springboot 3.3.5
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-analytics-ms
+      Descripción componente: Framework acelerador de desarrollo, para lograr capacidades empresariales, a partir de características para producir aplicaciones autocontenidas
+
+- **Componente:** postgresql
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-analytics-ms
+      Descripción componente: Componente de conexión a bases de datos SQL
+
+- **Componente:** springcloud 4.1.3
+- **Tipo:** Adoptado
+- **Depende de:**
+    - springboot 3.3.5
+    - java21
+- **Es usado por:**
+    - lilfac-analytics-ms
+      Descripción componente: Spring Cloud es un conjunto de herramientas que simplifica el desarrollo de microservicios y aplicaciones distribuidas en la nube, integrándose con Spring Boot.
+
+
+
 ##### 9.3.1.7 Componente 7
 
-**Descripción del componente:** Microservicio encargado de gestionar el envío de notificaciones multicanal (SMS, correo electrónico) a clientes y empleados, integrado con los eventos del sistema para disparar comunicaciones automáticas sobre pedidos, entregas, multas y alertas de inventario.
+**Descripción del componente:** Microservicio encargado de gestionar el envío de notificaciones multicanal (SMS, correo electrónico)
+a clientes y empleados, integrado con los eventos del sistema para disparar comunicaciones automáticas sobre pedidos, entregas, 
+multas y alertas de inventario.
 
-**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio lilfac-notification-ms y su relación de dependencias.
+**Motivación del diagrama:** Diagrama encargado de mostrar todos los componentes técnicos involucrados en el microservicio 
+lilfac-notification-ms y su relación de dependencias.
 
 **Diagrama**
 ---
-![img_6.png](img_6.png)
+
+<img width="479" height="326" alt="img_6" src="https://github.com/user-attachments/assets/badf2ee9-2c22-46c5-ba5a-1a0e7944b297" />
+
 ---
+
 - **Documentación:**
 - **Componente:** lilfac-notification-ms
   **Tipo:** Desarrollado
   **Depende de:**
     - Spring Boot 3.3.5
     - Java 21
+
+- **Componente:** java21
+- **Tipo:** Adoptado
+- **Depende de:**
+- **Es usado por:**
+    - springboot 3.3.5
+    - lilfac-notification-ms
+    - springcloud 4.1.3
+    - postgresql
+      Descripción componente: Stack base de desarrollo
+
+- **Componente:** springboot 3.3.5
+- **Tipo:** Adoptado
+- **Depende de:**
+    - java21
+- **Es usado por:**
+    - lilfac-notification-ms
+      Descripción componente: Framework acelerador de desarrollo, para lograr capacidades empresariales, a partir de características para producir aplicaciones autocontenidas
+
     
 
 #### 9.3.2 Diagrama de paquetes
@@ -2755,19 +2777,16 @@ paquetes, el sistema se estructura de forma modular, facilitando el análisis, d
 
 **Diagrama**
 ---
-![img_7.png](img_7.png)
+
+
+<img width="16384" height="9275" alt="img_8" src="https://github.com/user-attachments/assets/6006c85a-6cde-4074-886e-cd3441c143eb" />
+
 ---
 
 ###### Documentación de Paquetes
+
 ---
-**Paquete padre:** —
-**Paquete:** `java`
-**Jerarquía:** `java`
-**Depende de:** —
-**Es usado por:** —
-**Descripción paquete:** Paquete raíz del lenguaje que agrupa todos los componentes del proyecto LILFAC.
----
-**Paquete padre:** java
+**Paquete padre:** 
 **Paquete:** `co`
 **Jerarquía:** `co`
 **Depende de:** —
@@ -2788,7 +2807,7 @@ paquetes, el sistema se estructura de forma modular, facilitando el análisis, d
 **Jerarquía:** `co.edu.uco`
 **Depende de:** —
 **Es usado por:** —
-**Descripción paquete:** Paquete que identifica la Universidad Cooperativa de Colombia como organización propietaria del proyecto.
+**Descripción paquete:** Paquete que identifica la Universidad Catolica de Oriente como organización propietaria del proyecto.
  
 ---
 
@@ -3237,24 +3256,7 @@ paquetes, el sistema se estructura de forma modular, facilitando el análisis, d
   
 - **Descripción paquete:** Paquete que contiene la clase principal de arranque del microservicio (Spring Boot Application), responsable de inicializar el contexto de la aplicación, cargar la configuración desde Spring Cloud Config y registrar el servicio en el ecosistema de LILFAC.
 
----
 
-
-
-##### 9.3.2.1 Componente 1
-
-- **Diagrama:** *\<Muestre el diagrama de paquetes en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de paquetes del componente en cuestión con la documentación respectiva.\>*
-
-##### 9.3.2.2 Componente 2
-
-- **Diagrama:** *\<Muestre el diagrama de paquetes en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de paquetes del componente en cuestión con la documentación respectiva.\>*
-
-##### 9.3.2.N Componente N
-
-- **Diagrama:** *\<Muestre el diagrama de paquetes en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de paquetes del componente en cuestión con la documentación respectiva.\>*
 
 ---
 
@@ -3329,8 +3331,7 @@ hardware. Este diagrama detalla qué componentes de software se ejecutan en qué
 y cómo estos elementos se comunican entre sí a través de redes o conexiones.
 
 ##### 9.5.1.1 Diagrama
-![img_2.png](arquetipoReferencia.png)
-
+<img width="1792" height="862" alt="arquetipoReferencia" src="https://github.com/user-attachments/assets/29841f82-84bd-4444-bdeb-5c034d7b8758" />
 ##### 9.5.1.2 Documentación
 
 ---
