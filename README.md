@@ -4,6 +4,7 @@
 **Proyecto:** Lilfac
 
 **Arquitectos:**
+
 - Karen Juliana Montoya Velandia
 - Jose Manuel Mosquera Restrepo
 
@@ -195,6 +196,7 @@ Sus competidores actuales son las aplicaciones Rentman, Booqable y CurrentRMS, n
 
 De esta manera, el administrador no solo visualiza números y reportes, sino que recibe recomendaciones concretas que le ayudan a tomar decisiones más rentables y oportunas para la empresa.
 
+
 ---
 
 ## 2. Motivadores de la arquitectura
@@ -265,6 +267,8 @@ arquitectónicos, reduciendo la incertidumbre y asegurando la viabilidad de la s
 restricciones influyen directamente en la estructura del sistema, en la forma en que los componentes se comunican y en la 
 manera en que se implementan los requisitos funcionales y no funcionales. De esta forma, permiten que la arquitectura se 
 construya sobre una base tecnológica consistente, compatible y alineada con las capacidades y políticas de la organización.
+
+
 ---
 ###### *Restricciones técnicas*
 
@@ -305,6 +309,7 @@ En la definición del diseño, influyen en decisiones arquitectónicas como el a
 el nivel de automatización, la elección entre tecnologías propietarias o de código abierto y la estrategia de 
 implementación. De esta manera, garantizan que la arquitectura responda no solo a requerimientos técnicos, 
 sino también a las condiciones y objetivos del negocio.
+
 
 ---
 ###### *Restricciones de negocio*
@@ -374,6 +379,7 @@ optimizando consultas a la base de datos, procesos de autenticación y carga de 
 Además, permite definir criterios claros de prueba y aceptación para validar que el sistema 
 cumple con el nivel de rendimiento esperado por los usuarios.
 
+
 ---
 | Campo                 | Descripción                                                                                                                                                                                                                                            |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -396,6 +402,8 @@ Este escenario guía el diseño del sistema hacia la optimización del arranque 
 el desarrollo del proyecto a tomar decisiones técnicas sobre carga eficiente de recursos, consultas
 optimizadas y posible uso de cache. Además, establece un criterio claro y medible de aceptación 
 que permite validar el comportamiento del sistema en condiciones reales de uso.
+
+
 ---
 | Código                | ESC-CAL-REN-0002                                                                                                                                                                                                                                                                                                               |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -416,6 +424,7 @@ mostrar el mensaje de error correspondiente en un tiempo máximo de 2 segundos
 Este escenario guía el diseño hacia el desarrollo de procesos de validación eficientes y optimizados,
 reduciendo tiempos de consulta y respuesta. También establece un criterio medible para pruebas de
 rendimiento y experiencia de usuario.
+
 
 ---
 | Código                | ESC-CAL-REN-0003                                                                                                                                                                                                                                                                                       |
@@ -448,6 +457,7 @@ sin interrupciones en el servicio.
 Este escenario guía el diseño hacia la capacidad del sistema de soportar múltiples sesiones
 simultáneas, manteniendo tiempos de respuesta adecuados y evitando saturación de recursos. 
 También establece criterios medibles de escalabilidad y rendimiento bajo carga real.
+
 
 ---
 | Código                | ESC-CAL-REN-0011                                                                                                                                                                                                                                 |
@@ -496,6 +506,7 @@ multifactor, gestión de códigos temporales, control de expiración e integraci
 externos de mensajería y correo electrónico. Además, establece criterios claros para validar el
 nivel de seguridad y la eficiencia del proceso de autenticación.
 
+
 ---
 | Código                | ESC-CAL-SEG-0004                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -527,6 +538,7 @@ acceso al sistema permanezca protegido frente a posibles usos no autorizados.
 
 Este escenario orienta el diseño del sistema hacia la implementación de mecanismos de control de inactividad,
 temporizadores de sesión y cierre automático, asegurando que las sesiones no permanezcan abiertas indefinidamente.
+
 
 ---
 | Código                | ESC-CAL-SEG-0008                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -566,6 +578,7 @@ Este escenario orienta el diseño del sistema hacia la implementación de mecani
 fallos y mantenimiento controlado, con el fin de asegurar que el sistema permanezca disponible durante la mayor parte del
 tiempo. Además, establece un criterio medible para evaluar la continuidad operativa del sistema.
 
+
 ---
 | Código                | ESC-CAL-DIS-0001                                                                                                                                                                                                                                                                |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -589,6 +602,7 @@ realizarse sin interrupciones.
 Este escenario orienta el diseño del sistema hacia la implementación de mecanismos de escalabilidad,
 monitoreo continuo y tolerancia a fallos, con el fin de garantizar que la plataforma permanezca disponible incluso en
 periodos de alta demanda.
+
 
 ---
 | Código                  | ESC-CAL-DIS-0002                                                                                                                                                                                                                                                                                 |
@@ -628,6 +642,7 @@ Cuando el sistema se encuentre en operación, debe realizar respaldos automátic
 Este escenario orienta el diseño del sistema hacia la implementación de mecanismos automáticos de respaldo, almacenamiento
 seguro y procedimientos de restauración, asegurando la protección de la información y la continuidad operativa. Además,
 establece criterios claros para verificar la ejecución periódica y exitosa de las copias de seguridad.
+
 
 ---
 | Código                | ESC-CAL-CONF-0008                                                                                                                                                                          |
@@ -672,6 +687,7 @@ seguridad del sistema.
 Este escenario orienta el diseño del sistema hacia la implementación de módulos de gestión de parámetros configurables y 
 validación inmediata de cambios, asegurando que las configuraciones aplicadas tengan efecto de forma controlada y verificable. 
 
+
 ---
 | Código                | ESC-CAL-CADMI-0004                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -695,6 +711,7 @@ mensaje de éxito
 Este escenario el diseño del sistema hacia la implementación de mecanismos de administración centralizada de políticas de
 seguridad, propagación inmediata de configuraciones y control de sesiones en tiempo real, asegurando que los cambios de seguridad
 tengan efecto inmediato en todo el sistema. 
+
 
 ---
 | Código                | ESC-CAL-CADMI-0005                                                                                                                                                                                                                                                                                                                                                                       |
@@ -736,6 +753,7 @@ Este escenario orienta el diseño del sistema hacia la implementación de mecani
 optimización de consultas y uso eficiente de almacenamiento, asegurando que el crecimiento del volumen de datos
 no afecte la operatividad. 
 
+
 ---
 | Código                | ESC-CAL-ESCA-0004                                                                                                                                                                                                                                                   |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -759,6 +777,7 @@ resultados y mecanismos de cacheo, asegurando que el crecimiento del inventario 
 rendimiento general del sistema. Además, establece criterios para evaluar la eficiencia del sistema bajo volúmenes moderados de
 datos.
 
+
 ---
 | Código                | ESC-CAL-ESCA-0005                                                                                                                                                                                                                                                                                                                       |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -777,6 +796,7 @@ Cuando el sistema almacene datos de múltiples años de operación, debe permiti
 
 Este escenario orienta el diseño del sistema hacia la implementación de mecanismos de almacenamiento histórico estructurado, 
 indexación eficiente y estrategias de consulta optimizada, asegurando la accesibilidad de la información a largo plazo. 
+
 
 ---
 | Código                | ESC-CAL-ESCA-0006                                                                                                                                                                                                                                                                                                                                             |
@@ -841,6 +861,7 @@ Cuando se consulte una factura almacenada, el sistema debe mostrar quién la cre
 Este escenario orienta el diseño del sistema hacia la implementación de mecanismos de auditoría y trazabilidad visibles en 
 las consultas, asegurando que los metadatos de creación de las transacciones sean accesibles de forma consistente. 
 
+
 ---
 | Código                | ESC-CAL-TRAZ-0002                                                                                                                                                                                                                                                                         |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -869,6 +890,7 @@ Cuando un usuario modifique un pedido de alquiler, el sistema debe registrar el 
 
 Este escenario orienta el diseño del sistema hacia la implementación de mecanismos de auditoría de cambios, registro de eventos
 de modificación y almacenamiento de metadatos asociados a cada actualización, asegurando la integridad histórica de la información.
+
 
 ---
 | Código                | ESC-CAL-TRAZ-0003                                                                                                                                                                                                                                                                               |
@@ -923,6 +945,7 @@ Define la estructura global y las decisiones arquitectónicas clave que guiarán
 
 Las _**tácticas**_ son técnicas o métodos específicos que se usan para abordar problemas concretos o alcanzar ciertos objetivos. 
 Las tácticas son como los patrones específicos de diseño que se implementan para resolver desafíos particulares en la arquitectura.
+
 
 ---
 ######  *Tácticas y estrategias* 
@@ -1193,6 +1216,7 @@ Un arquetipo de solución es un modelo o patrón general que representa una form
 problema específico en un contexto particular. En otras palabras, es una estructura o una plantilla 
 que muestra cómo se puede resolver un tipo de desafío de manera efectiva. Estos arquetipos se basan 
 en prácticas comprobadas y patrones que han demostrado ser efectivos en contextos similares.
+
 ---
 
 ###### **_Diagrama Arquetipo de solución/referencia_**
@@ -1737,6 +1761,7 @@ Justificación: La elección de Grafana Cloud permite al equipo detectar degrada
 antes de que impacten a los usuarios, con una solución gestionada que elimina la carga operativa de mantener infraestructura
 de monitoreo propia. Su integración con el stack tecnológico elegido (Spring Boot, PostgreSQL, Redis) es nativa y bien 
 documentada.
+
 
 ---
 
@@ -2792,6 +2817,7 @@ paquetes, el sistema se estructura de forma modular, facilitando el análisis, d
 **Depende de:** —
 **Es usado por:** —
 **Descripción paquete:** Paquete raíz de la organización que agrupa todos los componentes del proyecto LILFAC.
+
 ---
 **Paquete padre:** `co`
 **Paquete:** `edu`
@@ -3272,44 +3298,109 @@ manera estable y efectiva bajo distintas cargas de trabajo.
 
 #### 9.4.1 Diagrama de secuencia
 
+---
+###### Modelo de capas
+
+<img width="1124" height="670" alt="img_10" src="https://github.com/user-attachments/assets/df7ec439-1cac-42c1-b194-125517756102" />
+
+___
+
+---
+
+El siguiente diagrama de secuencia muestra la interacción general de la arquitectura por capas anterior con el fin de generar un entendimiento del flujo que sigue por cada transacción que puede involucrar o no retorno de datos 
+
 Un diagrama de secuencia es un tipo de diagrama utilizado en ingeniería de software que muestra cómo interactúan los 
 diferentes componentes o partes de un sistema entre sí a lo largo del tiempo. Describe el flujo de mensajes y eventos 
 entre objetos, componentes o actores (como usuarios) para cumplir una función o proceso específico del sistema, con el
 tiempo representado en el eje vertical y los participantes en el eje horizontal.
 
-##### 9.4.1.1 Componente 1 Without Return
+___
+###### 9.4.1.1 Diagrama
 
-- **Diagrama:** *\<Muestre el diagrama de secuencia en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de secuencia del componente en cuestión con la documentación respectiva.\>*
+---
+<img width="740" height="484" alt="img_9" src="https://github.com/user-attachments/assets/7533f67e-c3ef-4f41-95b7-59e1c27edf18" />
+___
 
-##### 9.4.1.2 Componente 2 With Return
 
-- **Diagrama:** *\<Muestre el diagrama de secuencia en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de secuencia del componente en cuestión con la documentación respectiva.\>*
+###### 9.4.1.2 Documentación
 
-##### 9.4.1.N Componente N
+Aplicación: Lilfac
 
-- **Diagrama:** *\<Muestre el diagrama de secuencia en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de secuencia del componente en cuestión con la documentación respectiva.\>*
+Componente: Estereotipo general
+
+Descripción del componente: Componente que representa el estereotipo general de diseño detallado para todos los componentes de la solución
+
+Motivación del diagrama: Este modelo tiene como motivación mostrar el flujo de interacción y secuencia para llevar a cabo una transacción determinada sin retorno, o con retorno; Así como las capas que intervienen en cada momento del proceso.
+
+Número de acción: 1
+
+Nombre de acción: execute(DTO)
+
+Descripción: Acción ejecutada por el controller para procesar la información con el interactor
+
+Parámetro de entrada: DTO
+
+Descripción del parámetro de entrada: Objeto de transferencia de datos que recibe el controller
+
+Retorno: DTO/void
+
+Descripción del retorno: Contiene los datos procesados en formato DTO, o en caso de no generar retorno simplemente responde con void
+
+Capa origen: Controller
+
+Capa destino: Interactor
+
+Número de acción: 2
+
+Nombre de acción: execute(Domain)
+
+Descripción: Ejecuta el caso de uso procesando las reglas de negocio
+
+Retorno: Domain/void
+
+Descripción del retorno: Retorna el objeto de dominio listo para realizar las pruebas de las reglas de negocio
+
+Capa origen: Interactor
+
+Capa destino: UseCaseImpl
+
+Número de acción: 3.1
+
+Nombre de acción: DoAction(Entity)
+
+Descripción: Realiza la operación necesaria de el CRUD contra la fuente de información
+
+Retorno: Entity/void
+
+Descripción del retorno: En caso de generar retorno, lo devuelve en formato Entity para ser implementado 
+por el UseCase, de lo contrario devuelve void
+
+Capa origen: UseCaseImpl
+
+Capa destino: Repository
+
+Número de acción: 3.2
+
+Nombre de acción: DoAction(DTO)
+
+Descripción: Envía un objeto de tipo DTO a los servicios externos al core del programa
+
+Retorno: DTO/void
+
+Descripción del retorno: Devuelve un objeto de tipo DTO luego de haber realizado las transacciones 
+necesarias en el servicio externo
+
+Capa origen: Repository
+
+Capa destino: External service
+
+  
+
 
 #### 9.4.2 Diagrama de colaboración
 
 *\<Defina en términos comprensibles qué es diagrama de colaboración, cuál es su motivación y qué le aporta al diseño del sistema.\>*
 
-##### 9.4.2.1 Componente 1
-
-- **Diagrama:** *\<Muestre el diagrama de colaboración en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de colaboración del componente en cuestión con la documentación respectiva.\>*
-
-##### 9.4.2.2 Componente 2
-
-- **Diagrama:** *\<Muestre el diagrama de colaboración en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de colaboración del componente en cuestión con la documentación respectiva.\>*
-
-##### 9.4.2.N Componente N
-
-- **Diagrama:** *\<Muestre el diagrama de colaboración en cuestión.\>*
-- **Documentación:** *\<Muestre y/o detalle el diagrama de colaboración del componente en cuestión con la documentación respectiva.\>*
 
 ---
 
