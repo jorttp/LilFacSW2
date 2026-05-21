@@ -7,7 +7,6 @@
 **Arquitectos:**
 - Karen Juliana Montoya Velandia
 - Jose Manuel Mosquera Restrepo
-opiouiyfutdyrstearw
 ---
 
 ## Control de cambios y revisiones
@@ -1172,7 +1171,8 @@ el alcance y los requisitos del proyecto.
 ###### **_Diagrama modelo de contexto_**
 
 ---
-![img_6.png](modeloContexto.png)
+<img width="397" height="264" alt="img_1" src="https://github.com/user-attachments/assets/5bff3b4b-692f-4502-8fdb-a1d2457a74a0" />
+
 
 ---
 
