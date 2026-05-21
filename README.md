@@ -1411,7 +1411,7 @@ en prácticas comprobadas y patrones que han demostrado ser efectivos en context
 ###### **_Diagrama Arquetipo de solución/referencia_**
 
 ---
-![img_2.png](arquetipoReferencia.png)
+<img width="1792" height="862" alt="arquetipoReferencia" src="https://github.com/user-attachments/assets/a9328122-d1d8-4107-abdf-3fc16345d787" />
 
 ---
 
